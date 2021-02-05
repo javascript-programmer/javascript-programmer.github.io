@@ -1,0 +1,81 @@
+/**************/
+/*IMPORT FONTS*/
+/**************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/****************/
+/*FORMAT CONTENT*/
+/****************/
+* {box-sizing: border-box; margin: 0px; padding: 0px;}
+body {margin: 0px; padding: 0px; background-color: var(--bg); width: 100%; height: 100%; font-family: 'montserrat';}
+.pageContent {padding: 15px;}
+
+/**********/
+/*CSS VARS*/
+/**********/
+* {--bg: #FFFFFF; --content: #000000; --specialContent: #1E90FF; --contentBg: #CCCCCC; --contentBorder: var(--contentBg);}
+:is(a, button, ul.topNav > *):hover {--specialContent: #0074e4;}
+*.darkMode {--bg: #000000; --content: #FFFFFF; --specialContent: #ed143d; --contentBg: #333333;}
+:is(a, button, ul.topNav > *).darkMode:hover {--specialContent: #b01030;}
+
+/****************/
+/*STYLE ELEMENTS*/
+/****************/
+p, a, u, del, big, small, li {font-size: 25px;}
+p, li {color: var(--content);}
+a {text-decoration: none !important; color: var(--specialContent); font-weight: bold;}
+
+h1, h2, h3, h4, h5, h6 {padding: 10px; margin-bottom: 10px; color: var(--content); border-bottom: 1px solid var(--contentBorder); font-size: 35px;}
+h6{font-size:75%;} h5{font-size:80%;} h4{font-size:85%;} h3{font-size:90%;} h2{font-size:95%;} h1{font-size:100%;}
+
+ul {font-size: 50px;}
+ul li {list-style: none;}
+ul li::before {content: "\2022"; display: inline-block; color: var(--specialContent); padding: 5px;}
+
+iframe {border: 0px;}
+
+.jumbotron {background-color: var(--contentBg);}
+.jumbotron > * {padding: 10px;}
+
+button {
+    background-color: var(--specialContent);
+    color: var(--content);
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 150%;
+    font-family: 'monospace';
+}
+
+pre, code {font-family: monospace; background-color: var(--contentBg); color: var(--specialContent);}
+
+.projectCard {width: 100%; background-color: var(--contentBg); display: block;}
+.projectCard iframe {width: 35%; float: left; margin: auto; background-color: var(--contentBg); height: 100%;}
+.projectCard .projectCardDesc {float: right; width: 65%; background-color: var(--contentBg);}
+.projectCard .projectCardDesc h3 {border-bottom: 0px; padding-left: 50%; background-color: var(--contentBg);}
+
+/***********************/
+/*STYLE TOPNAV & FOOTER*/
+/***********************/
+.topNav {padding: 0px; margin: 0px; background-color: var(--contentBg); display: inline-block; position: sticky; top: 0px; width: 100%; box-sizing: content-box; list-style-type: none;}
+.topNav li {background-color: var(--specialContent); float: left; display: block; padding: 10px; line-height: 50px;}
+.topNav li::before {display: none;}
+.topNav li a {color: var(--content); padding: 14px; font-size: 25px; display: block; text-decoration: none !important; text-align: center;}
+
+.switch {position: relative; display: inline-block; width: 75px; height: 34px;}
+.switch input {opacity: 0; width: 0px; height: 0px;}
+.slider {position: absolute; cursor: pointer; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: white; border-radius: 34px; transform: translateY(50%);}
+.slider::before {position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: black; border-radius: 50%;}
+input:checked + .slider {background-color: rgb(0, 0, 0);}
+input:checked + .slider::before {background-color: white; transform: translateX(40px);}
+/*
+TODO: use content attribute to place the span and input elements instead of real html
+*/
+
+ul.footer {display: inline-block; width: 100%; border-top: 1px solid var(--contentBorder); overflow: hidden; margin-top: 10px;}
+.footer li {list-style-type: none; display: inline-block;}
+.footer li::before {display: none;}
+.footer li a {display: inline-block; margin: 10px; text-align: center;}
