@@ -79,3 +79,11 @@ ul.footer {display: inline-block; width: 100%; border-top: 1px solid var(--conte
 .footer li {list-style-type: none; display: inline-block;}
 .footer li::before {display: none;}
 .footer li a {display: inline-block; margin: 10px; text-align: center;}
+
+
+Github Profile
+             {
+                 
+                 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+                 
+}
